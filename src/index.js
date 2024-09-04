@@ -51,3 +51,9 @@ aboutButton.addEventListener("click", () => {
   document.getElementById("content").innerHTML = "";
   about();
 });
+
+
+// further ideas:
+// make restaurant name fancy text
+// add scrollable sample menu
+// add dialog form in about for contact form

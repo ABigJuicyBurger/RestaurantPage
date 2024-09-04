@@ -1,6 +1,7 @@
 export const about = () => {
   const mainPage = document.getElementById("content");
   const projectCreatorDiv = document.createElement("div");
+  projectCreatorDiv.classList.add("projectCreatorDiv");
 
   console.log("Hi");
 
