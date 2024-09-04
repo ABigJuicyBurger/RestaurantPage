@@ -7,19 +7,38 @@ import { about } from "./about.js";
 
 import "./styles.css";
 
-document.addEventListener("DOMContentLoaded", () => {
+function emptyContent() {
+  const content = document.getElementById("content");
+  while (content.firstChild) {
+    content.removeChild(content.firstChild);
+  }}
+
+function loadContent() {
+  emptyContent();
   header();
   content();
   menuSample();
   footer();
+}
+
+function mainPageLoader()
+ {
+  emptyContent();
+  loadContent();
+ }
+document.addEventListener("DOMContentLoaded", () => {
+  loadContent();
 });
 
 // will create tab switching logic on menu button (event listener)
 
 const nav = document.querySelector("nav");
 console.log(nav);
+const homeButton = nav.querySelectorAll("button")[0];
 const menuButton = nav.querySelectorAll("button")[1];
 console.log(menuButton);
+
+homeButton.addEventListener("click", mainPageLoader);
 
 menuButton.addEventListener("click", () => {
   document.getElementById("content").innerHTML = "";
@@ -31,4 +50,4 @@ const aboutButton = nav.querySelectorAll("button")[2];
 aboutButton.addEventListener("click", () => {
   document.getElementById("content").innerHTML = "";
   about();
-}) 
+});

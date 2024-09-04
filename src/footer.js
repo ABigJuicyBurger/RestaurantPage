@@ -5,6 +5,10 @@ import tiktokLogo from './footerlinks/tiktoklogo.png';
 import twitterxLogo from './footerlinks/twitterxlogo.png';
 
 export const footer = () => {
+  const existingFooter = document.querySelector("footer");
+
+  if (existingFooter) return;
+
   // Add logo and its attribution
   const body = document.querySelector("body");
 

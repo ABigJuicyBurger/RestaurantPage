@@ -205,6 +205,11 @@ button {
 
 /* divs in menu.js only*/
 .meals .category-title {
+  padding: 10px;
   font-size: 24px;
   font-weight: bold;
+}
+
+.drinks {
+  padding-bottom: 10px;
 }
