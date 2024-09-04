@@ -5,13 +5,16 @@ import { menu } from "./menu.js";
 import { footer } from "./footer.js";
 import { about } from "./about.js";
 
+// Comment to Daniel: all imported files are located here
+
 import "./styles.css";
 
 function emptyContent() {
   const content = document.getElementById("content");
   while (content.firstChild) {
     content.removeChild(content.firstChild);
-  }}
+  }
+}
 
 function loadContent() {
   emptyContent();
@@ -21,11 +24,10 @@ function loadContent() {
   footer();
 }
 
-function mainPageLoader()
- {
+function mainPageLoader() {
   emptyContent();
   loadContent();
- }
+}
 document.addEventListener("DOMContentLoaded", () => {
   loadContent();
 });
@@ -51,7 +53,6 @@ aboutButton.addEventListener("click", () => {
   document.getElementById("content").innerHTML = "";
   about();
 });
-
 
 // further ideas:
 // make restaurant name fancy text
