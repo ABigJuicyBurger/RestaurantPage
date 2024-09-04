@@ -3,7 +3,6 @@ import { content } from "./content.js";
 import { menuSample } from "./menuSample.js";
 import { menu } from "./menu.js";
 import { footer } from "./footer.js";
-
 import { about } from "./about.js";
 
 import "./styles.css";
@@ -26,3 +25,10 @@ menuButton.addEventListener("click", () => {
   document.getElementById("content").innerHTML = "";
   menu();
 });
+
+const aboutButton = nav.querySelectorAll("button")[2];
+
+aboutButton.addEventListener("click", () => {
+  document.getElementById("content").innerHTML = "";
+  about();
+}) 
