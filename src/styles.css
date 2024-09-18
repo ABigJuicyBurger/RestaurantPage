@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  font-size: 18px;
+}
+
+body {
+  /* remove horizontal scrollbar */
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #f2e8d9;
+  min-height: 100vh;
+}
+
+.hiddenLogos {
+  display: none;
+}
+
+header {
+  display: flex;
+  height: 15vh;
+  flex-direction: column;
+  justify-content: center;
+  width: 99vw;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.title {
+  order: -1;
+  margin-right: auto;
+  margin-left: 5%;
+  align-self: center;
+  font-size: larger;
+}
+
+#content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projectCreatorDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.projectCreatorDiv {
+  gap: 10px;
+  margin: 20px 0px;
+}
+
+.homePage {
+  gap: 10%;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+.homePage::before {
+  content: "";
+  position: absolute;
+  background: url(./mainimage.jpg) no-repeat center 30% / cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(60%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.welcomeText,
+.description {
+  margin-left: 7%;
+  font-weight: bold;
+}
+
+.welcomeText {
+  color: white;
+  font-size: 2rem;
+}
+
+.description {
+  color: limegreen;
+  font-size: 1.5rem;
+}
+
+.midDiv {
+  height: 140vh;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+}
+
+.midDivText {
+  height: 20%;
+  margin: 5% 0 0 7%;
+  font-size: 1.5rem;
+}
+
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-evenly;
+  transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+  will-change: transform;
+
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 25%;
+
+  margin: 0 10px;
+  box-sizing: border-box;
+}
+
+.slide img {
+  /* background-repeat: no-repeat; */
+  width: 100%;
+  height: auto;
+  object-position: center;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slider-arrow {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #8b4513;
+  height: 15vw;
+  flex-shrink: 0;
+  margin-top: auto;
+  padding: 0;
+}
+
+.hoursSection li {
+  margin-bottom: 10px;
+  color: limegreen;
+  font-weight: bold;
+  /* remove bullet ponit */
+  list-style-type: none;
+  /* fix centre due to no bullet points */
+}
+
+.logoDiv,
+.contactUs {
+  margin-left: 5%;
+  margin-top: 2%;
+  height: 75%;
+}
+
+.logo {
+  width: 7%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: darken;
+}
+
+.contactUs {
+  display: flex;
+  align-items: center;
+}
+
+[class^="socialMediaLogo"]:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+.contactUs a {
+  color: #4bb543;
+}
+
+.contactUs img:last-of-type {
+  margin-right: 5%;
+}
+
+.newsLetter {
+  flex-grow: 4;
+  color: limegreen;
+  mix-blend-mode: darken;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+[class^="otherLinks"] {
+  flex: 0 0 auto;
+  margin-right: 5%;
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000000;
+  -webkit-tap-highlight-color: transparent; /* prevents blue highlight on tap for iOS */
+}
+
+.antojitos,
+.entrees,
+.desserts,
+.drinks {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.meals .category-title {
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.drinks {
+  padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  header {
+    height: auto;
+    width: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    order: -1;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .homePage {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .welcomeText,
+  .description {
+    width: 90%;
+    margin: 10px auto;
+    font-size: 1rem;
+  }
+
+  .midDiv {
+    align-items: center;
+    height: auto;
+  }
+
+  .menuText {
+    text-align: center;
+  }
+
+  .midDivText {
+    margin: 10px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .sliderContainer {
+    width: 100vw;
+    overflow: hidden;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .slider {
+    display: flex;
+    width: calc(100% * (6));
+    transition: transform 0.5s ease-in-out;
+    padding: 0;
+  }
+
+  .slide {
+    flex: 0 0 calc(100% / (6));
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .slide img {
+    width: 280px !important;
+    max-height: 300px;
+    object-fit: contain;
+  }
+
+  .slider-arrow {
+    display: none;
+  }
+
+  .prev {
+    top: 10px;
+  }
+
+  .next {
+    bottom: 10px;
+    top: auto;
+  }
+
+  footer {
+    height: auto;
+    padding: 20px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logoDiv,
+  .contactUs {
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .logo {
+    width: 30%;
+    height: auto;
+  }
+
+  .contactUs {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  [class^="socialMediaLogo"] {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+
+  .newsLetter,
+  [class^="otherLinks"] {
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+  }
+}
