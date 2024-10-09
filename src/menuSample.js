@@ -94,7 +94,7 @@ export const menuSample = () => {
     currentSlide = (n + totalSlides) % totalSlides;
 
     if (isMobile) {
-      slider.style.transform = `translateX(-${currentSlide * 17.8}%)`;
+      slider.style.transform = `translateX(-${currentSlide * 17.5}%)`;
     } else {
       slider.style.transform = `translateX(-${
         (currentSlide + 1) * (100 / (totalSlides - 2))
